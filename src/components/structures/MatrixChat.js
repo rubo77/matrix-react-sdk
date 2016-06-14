@@ -216,6 +216,7 @@ module.exports = React.createClass({
                 identityServerUrl: isUrl,
                 guest: true
             });
+            MatrixClientPeg.get().setDisplayName("Guest");
         }, function(err) {
             if (showWarning) {
                 var ErrorDialog = sdk.getComponent("dialogs.ErrorDialog");
