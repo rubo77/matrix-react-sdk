@@ -126,6 +126,9 @@ module.exports = React.createClass({
                     </div>
                 </div>
             );
+            // added for spacetrace
+            this.props.onJoinClick();
+            // end added for spacetrace
         }
 
         if (this.props.canPreview) {
