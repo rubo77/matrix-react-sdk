@@ -116,6 +116,7 @@ module.exports = React.createClass({
 
         }
         else if (this.props.canJoin) {
+
             var name = this.props.room ? this.props.room.name : "";
             name = name ? <b>{ name }</b> : "a room";
             joinBlock = (
@@ -126,8 +127,9 @@ module.exports = React.createClass({
                     </div>
                 </div>
             );
+            this.props.onJoinClick();
         }
-
+        
         if (this.props.canPreview) {
             previewBlock = (
                 <div className="mx_RoomPreviewBar_preview_text">
